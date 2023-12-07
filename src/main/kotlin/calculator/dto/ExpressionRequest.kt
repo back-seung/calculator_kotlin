@@ -1,0 +1,1 @@
+package calculator.dtoimport calculator.util.validate.ExpressionValidatordata class ExpressionRequest(    val request: String) {    init {        if (request.isNullOrEmpty() || !ExpressionValidator.validate(this)) {            throw RuntimeException("올바른 식을 입력해주세요. (예: 1 + 2)")        }    }}

@@ -1,0 +1,1 @@
+package calculator.util.validateimport calculator.dto.ExpressionRequestclass ExpressionValidator {    companion object {        private val regex = Regex("""^\s*-?\d+(\s*[-+*/]\s*-?\d+)+\s*$""")        fun validate(expression: ExpressionRequest): Boolean {            val request = expression.request            return request.matches(regex)        }    }}
